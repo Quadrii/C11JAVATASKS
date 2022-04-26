@@ -3,23 +3,23 @@ package tdd;
 public class Driller {
     private int copies;
 
-    public void drillerPrice(int copyAmount){
-        if (copyAmount <= 4) {
-            copies = copyAmount * 2_000;
-        } else if (copyAmount > 4 && copyAmount <= 9) {
-            copies = copyAmount * 1_800;
-        } else if (copyAmount > 9 && copyAmount <= 29) {
-            copies = copyAmount * 1600;
-        } else if (copyAmount > 29 && copyAmount <= 49) {
-            copies = copyAmount * 1500;
-        } else if (copyAmount > 49 && copyAmount <= 99) {
-            copies = copyAmount * 1300;
-        } else if (copyAmount > 99 && copyAmount <= 199) {
-            copies = copyAmount * 1200;
-        } else if (copyAmount > 199 && copyAmount <= 499) {
-            copies = copyAmount * 1100;
-        } else if (copyAmount > 499) {
-            copies = copyAmount * 70000;
+    public void drillerPrice(int numberOfCopies){
+        if (numberOfCopies <= 4) {
+            copies = numberOfCopies * 2_000;
+        } else if (numberOfCopies > 4 && numberOfCopies <= 9) {
+            copies = numberOfCopies * 1_800;
+        } else if (numberOfCopies > 9 && numberOfCopies <= 29) {
+            copies = numberOfCopies * 1600;
+        } else if (numberOfCopies > 29 && numberOfCopies <= 49) {
+            copies = numberOfCopies * 1500;
+        } else if (numberOfCopies > 49 && numberOfCopies <= 99) {
+            copies = numberOfCopies * 1300;
+        } else if (numberOfCopies > 99 && numberOfCopies <= 199) {
+            copies = numberOfCopies * 1200;
+        } else if (numberOfCopies > 199 && numberOfCopies <= 499) {
+            copies = numberOfCopies * 1100;
+        } else if (numberOfCopies > 499) {
+            copies = numberOfCopies * 70000;
         }
     }
 
