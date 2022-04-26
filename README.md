@@ -1,2 +1,2 @@
-# cohort11Tasks
-Semicolon projects/assignments
+# cohort11Tasks 
+Java projects
