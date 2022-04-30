@@ -32,4 +32,25 @@ public class Kata {
         }
         return divides;
     }
+
+    public String grading(int scored){
+        String theGrade = null;
+        if (scored <= 60) {
+            theGrade = "F";
+        }
+        if (scored >= 60 && scored <= 70) {
+            theGrade = "D";
+        }
+
+        if (scored >= 70 && scored <= 80) {
+            theGrade = "C";
+        }
+        if (scored >= 80 && scored <= 90) {
+            theGrade = "B";
+        }
+        if (scored >= 90 && scored <= 100) {
+            theGrade = "A";
+        }
+        return theGrade;
+    }
 }

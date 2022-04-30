@@ -2,6 +2,8 @@ package tdd;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class KataTest {
@@ -42,5 +44,37 @@ public class KataTest {
         assertEquals(2, result);
     }
 
+    @Test
+    public void gradeCTest(){
+        Kata studentScore = new Kata();
+        String grades = studentScore.grading(75);
+        assertEquals("C", grades);
+    }
+    @Test
+    public void gradeFTest(){
+        Kata studentScore = new Kata();
+        String grades = studentScore.grading(50);
+        assertEquals("F", grades);
+    }
+
+    @Test
+    public void gradeBTest(){
+        Kata studentScore = new Kata();
+        String grades = studentScore.grading(88);
+        assertEquals("B", grades);
+    }
+    @Test
+    public void gradeATest(){
+        Kata studentScore = new Kata();
+        String grades = studentScore.grading(99);
+        assertEquals("A", grades);
+    }
+
+    @Test
+    public void gradeDTest(){
+        Kata studentScore = new Kata();
+        String grades = studentScore.grading(65);
+        assertEquals("D", grades);
+    }
 
 }
