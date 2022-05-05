@@ -3,13 +3,18 @@ import java.util.Scanner;
 public class ContinueOrStop {
     public static void main(String[] arg){
         Scanner input = new Scanner(System.in);
-        int counter = 1;
+        char cont= 'y';
+        int firstNum;
+        int secondNum;
         int sumOfNumbersEntered = 0;
-        while (counter <= 2){
-            System.out.print("Enter a number: ");
-            int twoNumbers = input.nextInt();
-            sumOfNumbersEntered = sumOfNumbersEntered + twoNumbers;
-            counter = counter + 1;
+        while (cont !='n'){
+            System.out.print("Enter first number: ");
+            firstNum = input.nextInt();
+            System.out.print("Enter second number: ");
+            secondNum = input.nextInt();
+            sumOfNumbersEntered = secondNum + firstNum;
+            System.out.print("Do you wish to continue? y/n ?");
+            cont = input.next().charAt(0);
         }
         System.out.printf("The sum of the number entered is %d%n ", sumOfNumbersEntered);
     }

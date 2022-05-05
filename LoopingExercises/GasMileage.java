@@ -1,7 +1,7 @@
 public class GasMileage {
         double totalMiles;
         double totalGallons;
-        public double getTripMPG(int miles, int gallons){
+        public double getTripMilePerGallon(int miles, int gallons){
             totalMiles = totalMiles + miles;
             totalGallons = totalGallons + gallons;
 
@@ -13,7 +13,7 @@ public class GasMileage {
         public double getTotalGallons(){
             return totalGallons;
         }
-        public double getTotalMPG(){
+        public double getTotalMilesPerGallon(){
             return totalMiles / totalGallons;
         }
 }
