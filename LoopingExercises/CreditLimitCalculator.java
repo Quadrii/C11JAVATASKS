@@ -8,7 +8,7 @@ public class CreditLimitCalculator {
     public void setAccountNumber(){
         this.accountNumber = accountNumber;
     }
-    public void setBalanceAtTheBegining(){
+    public void setBalanceAtTheBeginning(){
         this.balanceAtTheBeginning = balanceAtTheBeginning;
     }
     public void setTotalCharged(){
