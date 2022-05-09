@@ -28,7 +28,11 @@ public class Kata {
             return divides;
         }
         else {
-             divides = firstNumber / secondNumber;
+             if (firstNumber > secondNumber){
+                 divides = firstNumber / secondNumber;
+             } else if (secondNumber > firstNumber) {
+                 divides = secondNumber / firstNumber;
+             }
         }
         return divides;
     }

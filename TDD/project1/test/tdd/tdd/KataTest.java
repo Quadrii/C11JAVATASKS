@@ -40,8 +40,8 @@ public class KataTest {
     @Test
     public void divisionTest(){
         Kata calculator = new Kata();
-        int result = calculator.division(9, 4);
-        assertEquals(2, result);
+        int result = calculator.division(2, 10);
+        assertEquals(5, result);
     }
 
     @Test

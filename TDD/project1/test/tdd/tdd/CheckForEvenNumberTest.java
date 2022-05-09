@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.testng.AssertJUnit.assertEquals;
+
 
 public class CheckForEvenNumberTest {
     @Test

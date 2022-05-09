@@ -5,7 +5,6 @@ public class Mileage{
         int gallons;
         String answer = "";
         Scanner input = new Scanner(System.in);
-        Scanner scan = new Scanner(System.in);
         GasMileage mileage = new GasMileage();
         do {
             System.out.print("Enter the miles: ");
@@ -14,7 +13,7 @@ public class Mileage{
             gallons = input.nextInt();
             System.out.printf("Your MPG for this trip is %.2f: \n ", mileage.getTripMilePerGallon(miles, gallons));
             System.out.println("Do you want to add another trip? y/n");
-            answer = scan.next();
+            answer = input.next();
         }
         while(answer.equals("y"));
         System.out.println("COMBINE TOTAL MPG");
