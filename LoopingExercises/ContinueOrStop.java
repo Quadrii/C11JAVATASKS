@@ -9,13 +9,13 @@ public class ContinueOrStop {
         String answer = "";
         do {
             System.out.print("Enter first number: ");
-            firstNum = input.nextInt();
+                firstNum = input.nextInt();
             System.out.print("Enter second number: ");
-            secondNum = input.nextInt();
-            sumOfNumbersEntered = secondNum + firstNum;
+                secondNum = input.nextInt();
+                sumOfNumbersEntered = secondNum + firstNum;
             System.out.printf("The sum of the numbers entered is %d%n ", sumOfNumbersEntered);
             System.out.println("Do you wish to continue? y/n ? ");
-            answer=scan.next();
+                answer=scan.next();
         }while(answer.equals("y"));
     }
 }
