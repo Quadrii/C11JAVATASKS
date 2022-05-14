@@ -1,6 +1,25 @@
 package tdd;
 
 public class Kata {
+    public static int noOfFactors(int factors) {
+         int numbers = 0;
+        for (int i=1; i<= factors; i++){
+            if (factors % i==0){
+                numbers = numbers+1;
+            }
+        }
+        return numbers;
+    }
+
+    public static boolean isPrime(int num) {
+        if (noOfFactors(num)==2){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     public int add(int firstNumber, int secondNumber){
         int sum = firstNumber + secondNumber;
         return sum;

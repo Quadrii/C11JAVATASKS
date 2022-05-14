@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class NokiaPhone {
-    public static void main(String[] arg){
-        Scanner input = new Scanner(System.in);
+    static void request(){
         System.out.println("Enter 1 for phonebooks: ");
         System.out.println("Enter 2 for Messages: ");
         System.out.println("Enter 3 for chat: ");
@@ -15,6 +14,89 @@ public class NokiaPhone {
         System.out.println("Enter 11 for clock: ");
         System.out.println("Enter 12 for profiles: ");
         System.out.println("Enter 13 for sim services: ");
+    }
+    static void messageStatic(){
+        System.out.println("Enter 1 for Write Messages");
+        System.out.println("Enter 2 for Inbox: ");
+        System.out.println("Enter 3 for outbox: ");
+        System.out.println("Enter 4 for picture messages");
+        System.out.println("Enter 5 for templates");
+        System.out.println("Enter 6 for smileys: ");
+        System.out.println("Enter 7 for message settings");
+        System.out.println("Enter 8 for info servcie");
+        System.out.println("Enter 9 for voice mail box number");
+        System.out.println("Enter 10 for Service command editor");
+    }
+    static void callStatic(){
+        System.out.println("Enter 1 for Missed Calls");
+        System.out.println("Enter 2 for Received calls");
+        System.out.println("Enter 3 for dialed numbers ");
+        System.out.println("Enter 4 for Erase recent call lists");
+        System.out.println("Enter 5 call validity");
+        System.out.println("Enter 6 to show all calls");
+        System.out.println("Enter 7 for call cost settings");
+        System.out.println("Enter 8 for prepaid credit");
+    }
+    static void toneStatic(){
+        System.out.println("Enter 1 for ringing tone");
+        System.out.println("Enter 2 for ringing volume");
+        System.out.println("Enter 3 for Incoming call alert");
+        System.out.println("Enter 4 for composer");
+        System.out.println("Enter 5 for Message alert tone");
+        System.out.println("Enter 6 for keypad tones");
+        System.out.println("Enter 7 for warning and gaming tones");
+        System.out.println("Enter 8 for vibrating alert");
+        System.out.println("Enter 9 for screen saver");
+        System.out.println("Enter 0 to go back");
+    }
+
+    static void callSettingStatic(){
+        System.out.println("Enter 1 for Call Settings");
+        System.out.println("Enter 2 for phone settings");
+        System.out.println("Enter 3 for security settings");
+        System.out.println("Enter 4 for restore factory settings");
+        System.out.println("Enter 0 to go back");
+    }
+    static void clockStatic(){
+        System.out.println("Enter 1 for alarm clock");
+        System.out.println("Enter 2 for clock settings");
+        System.out.println("Enter 3 for date settings");
+        System.out.println("Enter 4 for Stopwatch");
+        System.out.println("Enter 5 for countdown timer");
+        System.out.println("Enter 6 for auto update of date and time");
+        System.out.println("Enter 0 to go back");
+    }
+
+    static void diallingStatic(){
+        System.out.println("Enter 1 for Automatic redial");
+        System.out.println("Enter 2 for speed dialing");
+        System.out.println("Enter 3 for call waiting options");
+        System.out.println("Enter 4 for own number sending");
+        System.out.println("Enter 5 for phone line in use");
+        System.out.println("Enter 6 for automatic answer");
+        System.out.println("Enter 0 to go back");
+    }
+    static void codeSettingStatic(){
+        System.out.println("Enter 1 for PIN code request");
+        System.out.println("Enter 2 for call barring service");
+        System.out.println("Enter 3 for fixed dialing");
+        System.out.println("Enter 4 for closed user group");
+        System.out.println("Enter 5 for phone security");
+        System.out.println("Enter 6 to change access codes");
+        System.out.println("Enter 0 to go back");
+    }
+    static void languageSettingStatic(){
+        System.out.println("Enter 1 for language");
+        System.out.println("Enter 2 for cell info display");
+        System.out.println("Enter 3 for welcome note");
+        System.out.println("Enter 4 for network selection");
+        System.out.println("Enter 5 for lights");
+        System.out.println("Enter 6 to confirm sim service actions");
+        System.out.println("Enter 0 to go back");
+    }
+    public static void main(String[] arg){
+        Scanner input = new Scanner(System.in);
+        request();
         int code = input.nextInt();
 
         switch (code){
@@ -29,6 +111,7 @@ public class NokiaPhone {
                 System.out.println("Enter 8 for options: ");
                 System.out.println("Enter 9 for speed dials: ");
                 System.out.println("Enter 10 for voice tags: ");
+                System.out.println("press 0 to go back");
                 int phonebookInfo = input.nextInt();
                 switch (phonebookInfo){
                     case 1:
@@ -64,19 +147,19 @@ public class NokiaPhone {
                                 System.out.println("Memory Status");
                                 break;
                         }
+                        break;
+                    case 9:
+                        System.out.println("Speed Dials");
+                            break;
+                    case 10:
+                        System.out.println("Voice Tags");
+                            break;
+                    case 0:
+                        request();
                 }
                 break;
             case 2:
-                System.out.println("Enter 1 for Write Messages");
-                System.out.println("Enter 2 for Inbox: ");
-                System.out.println("Enter 3 for outbox: ");
-                System.out.println("Enter 4 for picture messages");
-                System.out.println("Enter 5 for templates");
-                System.out.println("Enter 6 for smileys: ");
-                System.out.println("Enter 7 for message settings");
-                System.out.println("Enter 8 for info servcie");
-                System.out.println("Enter 9 for voice mail box number");
-                System.out.println("Enter 10 for Service command editor");
+                messageStatic();
                 int messageInfo = input.nextInt();
                 switch (messageInfo){
                     case 1:
@@ -98,18 +181,17 @@ public class NokiaPhone {
                         System.out.println("smileys");
                         break;
                     case 7:
-                        System.out.println("Enter 1 for Sent");
+                        System.out.println("Enter 1 for sent:");
                         int sentOptions = input.nextInt();
                         switch (sentOptions){
                             case 1:
                                 System.out.println("message center number");
-                                break;
+
                             case 2:
                                 System.out.println("Message sent as");
-                                break;
+
                             case 3:
                                 System.out.println("message validity");
-                                break;
                         }
                             System.out.println("Enter 2 for Common:");
                         int commonSettings = input.nextInt();
@@ -133,20 +215,19 @@ public class NokiaPhone {
                     case 10:
                         System.out.println("Service Command Editor");
                         break;
+                    case 0:
+                        request();
+                        break;
                 }
                 break;
             case 3:
                 System.out.println("Chat");
+                System.out.println("press 0 to go back");
+                int backRequest = input.nextInt();
+                request();
                 break;
             case 4:
-                System.out.println("Enter 1 for Missed Calls");
-                System.out.println("Enter 2 for Received calls");
-                System.out.println("Enter 3 for dialed numbers ");
-                System.out.println("Enter 4 for Erase recent call lists");
-                System.out.println("Enter 5 call validity");
-                System.out.println("Enter 6 to show all calls");
-                System.out.println("Enter 7 for call cost settings");
-                System.out.println("Enter 9 for prepaid credit");
+                callStatic();
                 int callsInfo = input.nextInt();
                 switch (callsInfo){
                     case 1:
@@ -167,6 +248,7 @@ public class NokiaPhone {
                         System.out.println("Enter 3 for Received calls duration");
                         System.out.println("Enter 4 for dialled call duration");
                         System.out.println("Enter 5 for clear timers");
+                        System.out.println("press 0 to go back");
                         int callDurations = input.nextInt();
                         switch (callDurations){
                             case 1:
@@ -184,12 +266,16 @@ public class NokiaPhone {
                             case 5:
                                 System.out.println("clear timers");
                                 break;
+                            case 0:
+                                callStatic();
+                                break;
                         }
                         break;
                     case 6:
                         System.out.println("Enter 1 for last call costs");
                         System.out.println("Enter 2 for all call costs");
                         System.out.println("Enter 3 for clear counters ");
+                        System.out.println("press 0 to go back");
                         int callCounters = input.nextInt();
                         switch (callCounters){
                             case 1:
@@ -201,11 +287,15 @@ public class NokiaPhone {
                             case 3:
                                 System.out.println("Clear Counters");
                                 break;
+                            case 0:
+                                callStatic();
+                                    break;
                         }
                         break;
                     case 7:
                         System.out.println("Enter 1 for Call cost limit");
                         System.out.println("Enter 2 for Show cost limits");
+                        System.out.println("Enter 0 to go back");
                         int callCosts = input.nextInt();
                         switch (callCosts){
                             case 1:
@@ -214,23 +304,21 @@ public class NokiaPhone {
                             case 2:
                                 System.out.println("Show cost limits");
                                 break;
+                            case 0:
+                                callStatic();
+                                    break;
                         }
                         break;
                     case 8:
                         System.out.println("Prepaid credit");
+                        System.out.println("Enter 0 to go back");
+                        int credit = input.nextInt();
+                        callStatic();
                         break;
                 }
                 break;
             case 5:
-                System.out.println("Enter 1 for ringing tone");
-                System.out.println("Enter 2 for ringing volume");
-                System.out.println("Enter 3 for Incoming call alert");
-                System.out.println("Enter 4 for composer");
-                System.out.println("Enter 5 for Message alert tone");
-                System.out.println("Enter 6 for keypad tones");
-                System.out.println("Enter 7 for warning and gaming tones");
-                System.out.println("Enter 8 for vibrating alert");
-                System.out.println("Enter 9 for screen saver");
+                toneStatic();
                 int tones= input.nextInt();
                 switch (tones){
                     case 1:
@@ -260,22 +348,17 @@ public class NokiaPhone {
                     case 9:
                         System.out.println("Screen saver");
                             break;
+                    case 0:
+                        request();
+                            break;
                 }
                 break;
             case 6:
-                System.out.println("Enter 1 for Call Settings");
-                System.out.println("Enter 2 for phone settings");
-                System.out.println("Enter 3 for security settings");
-                System.out.println("Enter 4 for restore factory settings");
+                callSettingStatic();
                 int generalSettings = input.nextInt();
                 switch (generalSettings){
                     case 1:
-                        System.out.println("Enter 1 for Automatic redial");
-                        System.out.println("Enter 2 for speed dialing");
-                        System.out.println("Enter 3 for call waiting options");
-                        System.out.println("Enter 4 for own number sending");
-                        System.out.println("Enter 5 for phone line in use");
-                        System.out.println("Enter 6 for automatic answer");
+                        diallingStatic();
                         int dialing = input.nextInt();
                         switch (dialing){
                             case 1:
@@ -296,15 +379,13 @@ public class NokiaPhone {
                             case 6:
                                 System.out.println("Automatic Answer");
                                     break;
+                            case 0:
+                                diallingStatic();
+                                    break;
                         }
                         break;
                     case 2:
-                        System.out.println("Enter 1 for language");
-                        System.out.println("Enter 2 for cell info display");
-                        System.out.println("Enter 3 for welcome note");
-                        System.out.println("Enter 4 for network selection");
-                        System.out.println("Enter 5 for lights");
-                        System.out.println("Enter 6 to confirm sim service actions");
+                        languageSettingStatic();
                         int languageSettings = input.nextInt();
                         switch (languageSettings){
                             case 1:
@@ -325,15 +406,13 @@ public class NokiaPhone {
                             case 6:
                                 System.out.println("Confirm SIM service actions");
                                 break;
+                            case 0:
+                                callSettingStatic();
+                                    break;
                         }
                         break;
                     case 3:
-                        System.out.println("Enter 1 for PIN code request");
-                        System.out.println("Enter 2 for call barring service");
-                        System.out.println("Enter 3 for fixed dialing");
-                        System.out.println("Enter 4 for closed user group");
-                        System.out.println("Enter 5 for phone security");
-                        System.out.println("Enter 6 to change access codes");
+                        codeSettingStatic();
                         int codeSettings = input.nextInt();
                         switch (codeSettings){
                             case 1:
@@ -354,31 +433,44 @@ public class NokiaPhone {
                             case 6:
                                 System.out.println("Change Access Codes");
                                     break;
+                            case 0:
+                                languageSettingStatic();
+                                    break;
                         }
                         break;
                     case 4:
                         System.out.println("Restore Factory Settings");
+                            System.out.println("Enter 0 to go back");
+                            int factorySettings = input.nextInt();
+                            callSettingStatic();
                             break;
                 }
             case 7:
                 System.out.println("Call Divert");
+                System.out.println("Enter 0 to go back");
+                int divertBack = input.nextInt();
+                request();
                     break;
             case 8:
                 System.out.println("Games");
+                System.out.println("Enter 0 to go back");
+                int backGame = input.nextInt();
+                request();
                     break;
             case 9:
                 System.out.println("Calculator");
+                System.out.println("Enter 0 to go back");
+                int backCalc = input.nextInt();
+                    request();
                     break;
             case 10:
                 System.out.println("Reminders");
+                System.out.println("Enter 0 to go back");
+                int backReminder = input.nextInt();
+                request();
                     break;
             case 11:
-                System.out.println("Enter 1 for alarm clock");
-                System.out.println("Enter 2 for clock settings");
-                System.out.println("Enter 3 for date settings");
-                System.out.println("Enter 4 for Stopwatch");
-                System.out.println("Enter 5 for countdown timer");
-                System.out.println("Enter 6 for auto update of date and time");
+                clockStatic();
                 int clocking = input.nextInt();
                 switch (clocking){
                     case 1:
@@ -399,13 +491,22 @@ public class NokiaPhone {
                     case 6:
                         System.out.println("auto update of date and time");
                             break;
+                    case 0:
+                        System.out.println("Enter 0 to go back");
+                        request();
                 }
                 break;
             case 12:
                 System.out.println("Profiles");
+                System.out.println("Enter 0 to go back");
+                int profiled = input.nextInt();
+                request();
                     break;
             case 13:
                 System.out.println("SIM services");
+                System.out.println("Enter 0 to go back");
+                int simServ = input.nextInt();
+                request();
                     break;
         }
     }

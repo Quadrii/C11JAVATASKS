@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KataTest {
     @Test
@@ -76,5 +77,17 @@ public class KataTest {
         String grades = studentScore.grading(65);
         assertEquals("D", grades);
     }
+
+    @Test
+    public void factorsTest(){
+        int factors = Kata.noOfFactors(5);
+        assertEquals(2, factors);
+    }
+    @Test
+    public void primeNumberTest(){
+        boolean isPrime = Kata.isPrime(5);
+        assertTrue(isPrime);
+    }
+
 
 }

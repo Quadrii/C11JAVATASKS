@@ -12,6 +12,7 @@ public class InstanceResponse {
             case 1:
                 System.out.println("Enter 1 for data: ");
                 System.out.println("Enter 2 for transfer: ");
+                System.out.println("press 0 to go back");
                 int english = input.nextInt();
                 switch (english){
                     case 1:
