@@ -4,8 +4,8 @@ public class SalesCommission {
     double itemSold;
 
     double salesPersonEarnings;
-    public void enterItem(int x){
-        switch (x){
+    public void enterItem(int item){
+        switch (item){
             case 1:
             itemSold += 239.99;
             break;

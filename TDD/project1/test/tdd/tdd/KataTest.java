@@ -1,11 +1,10 @@
 package tdd;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
-import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class KataTest {
     @Test
