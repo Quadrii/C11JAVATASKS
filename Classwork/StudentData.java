@@ -1,9 +1,9 @@
 package Classwork;
 
 public class StudentData {
-    private String[] name = new String[3];
+    private String[] name;
     private int[][] grades;
-
+    private int[] totalScores;
     private String subjects[];
 
     public String[] getSubjects(String[] studentSubject) {
@@ -30,4 +30,33 @@ public class StudentData {
         return grades;
     }
 
+    public int totalScore(int index){
+        int total=0;
+        for (int j=0; j<grades.length; j++){
+            total=total+grades[index][j];
+        }
+        return total;
+    }
+
+    public int subjectScores(int index){
+        int subScores=0;
+        for (int i=0; i< grades.length;i++){
+            subScores = subScores+grades[i][index];
+        }
+        return subScores;
+    }
+
+    public int averageScore(int index){
+        int averageScore=0;
+        averageScore = totalScore(index)/ subjects.length;
+        return averageScore;
+    }
+//    public int calcHighScore(){
+//        int maxScore=totalScore(0);
+//        for (int i=0; i < totalScore().length; i++) {
+//            if (total[i] > max) {
+//                max = itemPrice[i];
+//            }
+//        }
+//    }
 }

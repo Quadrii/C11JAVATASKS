@@ -18,7 +18,7 @@ public class SumOfDigits {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter 4 digits numbers: ");
         int digits = input.nextInt();
-        System.out.print(digits);
+        System.out.println(digits);
         System.out.print("The sum of the digits is " + sumDgts(digits) );
     }
 
