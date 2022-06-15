@@ -64,5 +64,7 @@ public class StudentDataMain {
         System.out.println("The total score for " + studentSubjects[1] + " " + "is" + " " + studentData.subjectScores(1));
         System.out.println("The total score for " + studentSubjects[2] + " " + "is" + " " + studentData.subjectScores(2));
 
+        System.out.println("The student with the lowest average score is: " + studentData.calcLowestScore());
+        System.out.println("The highest average is: " + studentData.calcHighScore());
     }
 }

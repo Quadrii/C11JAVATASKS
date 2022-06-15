@@ -41,7 +41,7 @@ public class StudentData {
     public int subjectScores(int index){
         int subScores=0;
         for (int i=0; i< grades.length;i++){
-            subScores = subScores+grades[i][index];
+            subScores = subScores + grades[i][index];
         }
         return subScores;
     }
@@ -51,12 +51,27 @@ public class StudentData {
         averageScore = totalScore(index)/ subjects.length;
         return averageScore;
     }
-//    public int calcHighScore(){
-//        int maxScore=totalScore(0);
-//        for (int i=0; i < totalScore().length; i++) {
-//            if (total[i] > max) {
-//                max = itemPrice[i];
-//            }
-//        }
-//    }
+    public int calcHighScore(){
+        int maxScore= 0;
+        for (int i=0; i < name.length; i++) {
+                maxScore = averageScore(0);
+            if (averageScore(i) > maxScore) {
+                maxScore = averageScore(i);
+            }
+        }
+        return maxScore;
+    }
+
+
+    public int calcLowestScore(){
+        int minScore= 0;
+        for (int i=0; i < name.length; i++) {
+                minScore = averageScore(0);
+            if (averageScore(i) < minScore ) {
+                minScore = averageScore(i);
+            }
+        }
+        return minScore;
+    }
+
 }

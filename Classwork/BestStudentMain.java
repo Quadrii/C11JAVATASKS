@@ -10,7 +10,7 @@ public class BestStudentMain {
         int counter = 0;
         while (counter < noOfStudent){
             System.out.println("press 1 to enter student name");
-            System.out.println("press 2 to enter student name");
+            System.out.println("press 2 to enter student score");
             System.out.println("press 3 to check student name");
             System.out.println("press 4 to check student score");
             Scanner input = new Scanner(System.in);

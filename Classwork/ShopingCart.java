@@ -5,7 +5,6 @@ public class ShopingCart {
     private String[] itemName=new String[4];
     private String customerName;
     private int discount;
-
     private final double  VAT = 0.175;
     private String cashierName;
     private int[] itemPrice=new int[4];
@@ -79,7 +78,7 @@ public class ShopingCart {
         double calcVat;
         for (int i=0; i<itemName.length;i++){
             calcVat = calcDiscount(index) *  VAT;
-            finalAmountPaid = calcDiscount(index)+ calcVat;
+            finalAmountPaid = calcDiscount(index) + calcVat;
         }
         return finalAmountPaid;
     }
