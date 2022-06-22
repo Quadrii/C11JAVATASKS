@@ -22,7 +22,7 @@ public class ParkingCharges {
         while (count < noOfCustomers){
             System.out.println("Enter name of customer");
              String customerName = input.next();
-            System.out.println("Enter hour parked");
+            System.out.println("Enter hours parked");
                 int hoursParked = input.nextInt();
             System.out.println( "Hello " +  customerName + "You will pay " + chargesToBePaid(hoursParked) + " " + "parking here yesterday" );
             count++;
