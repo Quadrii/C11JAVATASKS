@@ -1,3 +1,5 @@
+package Chapter2and3.CalculateTriangle;
+
 import java.util.Scanner;
 public class AreaOfTriangle {
     public static void main(String... args){

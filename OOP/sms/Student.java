@@ -17,32 +17,28 @@ public class Student {
         this.id = idNumber;
         idNumber++;
     }
-    public void selectCourse(Course course){
-        studentCourses.add(course);
-    }
+
     public ArrayList<Course> getStudentCourses(){
         return studentCourses;
     }
-
-    public Course viewCourse(String courseName, int courseCode){
+    public void selectCourse(Course course){
+        studentCourses.add(course);
+    }
+    public Course viewCourse(int courseCode){
         for (Course course : studentCourses){
             if (Objects.equals(course.getCourseCode(), courseCode)){
-                if (Objects.equals(course.getCourseName(), courseName)){
-                    return course;
-                }
+                return course;
             }
         }
         throw new SchoolExceptions("Course does not exist");
     }
 
-    public void dropCourse(String courseName, int courseCode){
+    public void dropCourse(String courseName){
         for (Course course : studentCourses){
-            if (Objects.equals(course.getCourseCode(), courseCode)){
-                if (Objects.equals(course.getCourseName(), courseName)){
-                    studentCourses.remove(course);
-                    System.out.println(courseName + " " + courseCode + " has been removed!");
-                    return;
-                }
+            if (Objects.equals(course.getCourseName(), courseName)){
+                studentCourses.remove(course);
+                System.out.println(courseName + " " + " has been removed!");
+                return;
             }
         }
         throw new SchoolExceptions("Course does not exist");

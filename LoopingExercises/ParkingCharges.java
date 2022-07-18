@@ -1,5 +1,4 @@
 import java.util.Scanner;
-//9512
 public class ParkingCharges {
     public static double chargesToBePaid(int hourly){
        final double parkChargesForThreeHours = 2.00;
@@ -7,7 +6,7 @@ public class ParkingCharges {
         double payment = 0;
         if (hourly <= 3){
             payment = parkChargesForThreeHours;
-        } else if (hourly > 3) {
+        } else {
             int calcExtraHours;
             calcExtraHours = hourly - 3;
             payment = (additionalHourCharges * calcExtraHours) + parkChargesForThreeHours;

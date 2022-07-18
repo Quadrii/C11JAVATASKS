@@ -6,10 +6,18 @@ import java.util.Objects;
 
 public class School {
     private static int idNumber = 1;
-
+    private String schoolName;
+    private String address;
+    public School(String schoolName, String address){
+        this.schoolName = schoolName;
+        this.address = address;
+    }
     ArrayList <Student> students = new ArrayList<>();
     ArrayList <Course> courses = new ArrayList<>();
 
+    public ArrayList <Student> getStudents(){
+        return students;
+    }
     public void addCourse(String courseName, String courseCode){
         Course course = new Course(courseName, courseCode);
         courses.add(course);

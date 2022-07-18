@@ -1,3 +1,5 @@
+package Chapter2and3.SqaureAddSub;
+
 import java.util.Scanner;
 
 public class SquareCalc {

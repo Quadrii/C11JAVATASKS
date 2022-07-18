@@ -1,3 +1,5 @@
+package Chapter2and3.calculateTravelCost;
+
 import java.util.Scanner;
 
 public class TravelCost {

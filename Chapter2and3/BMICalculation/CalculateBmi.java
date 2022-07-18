@@ -1,3 +1,5 @@
+package Chapter2and3.BMICalculation;
+
 import java.util.Scanner;
 
 public class CalculateBmi {

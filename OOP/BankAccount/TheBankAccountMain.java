@@ -1,6 +1,5 @@
 package OOP.BankAccount;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,18 +8,11 @@ public class TheBankAccountMain {
 
     static Bank bank;
     private static void dummyAccounts(){
-        ArrayList<TheBankAccount> accountList = new ArrayList<>();
-        ArrayList<Customer> customerArrayList = new ArrayList<>();
-        TheBankAccount account = new TheBankAccount("Laolu","Anjana", "12123546", 2345467, "2341");
-        TheBankAccount account1 = new TheBankAccount("Isiak", "Kolacek", "26353647", 576835536, "3563");
-        accountList.add(account);
-        accountList.add(account1);
+        bank.createAccount("Laolu","Anjana", "12123546", 2345467);
+        bank.createAccount("Isiak", "Kolacek", "26353647", 576835536);
 
-        Customer customer = new Customer("philip", 26, Gender.MALE);
-        Customer customer1 = new Customer("omolara", 35, Gender.FEMALE );
-        customerArrayList.add(customer);
-        customerArrayList.add(customer1);
-
+       bank.registerACustomer("Philip", Gender.MALE, 32);
+       bank.registerACustomer("sharon", Gender.FEMALE, 25);
     }
 
     private static void register(){
@@ -49,21 +41,21 @@ public class TheBankAccountMain {
         String accountNumber = input.next();
         System.out.println("Enter BVN");
         int BVN = input.nextInt();
-        System.out.println("Enter password");
-        String password = input.next();
-        bank.createAccount(firstName, lastname, accountNumber, BVN, password);
+        bank.createAccount(firstName, lastname, accountNumber, BVN);
     }
     public static void main(String[] args) {
-        dummyAccounts();
+        String bankName = "Oceanic Bank";
+        String bankAddress = "Yaba, lagos";
         int BVN;
+        bank = new Bank(bankName, bankAddress);
+        dummyAccounts();
+        System.out.println("####################################################");
+        System.out.println("Welcome to " + bankName.toUpperCase());
+        System.out.println("####################################################");
         int sentinel = 0;
-    try {
+        try {
         while (sentinel != -1){
-            System.out.println("####################################################");
-            System.out.println("Welcome to Sumondere Bank");
-            System.out.println("####################################################");
-            bank = new Bank();
-            System.out.println("Press 1 to register as a customer");
+            System.out.println("Press 1 to register a customer");
             System.out.println("press 2 to create an account");
             System.out.println("press 3 to view account");
             System.out.println("press 4 to deposit");
@@ -95,12 +87,12 @@ public class TheBankAccountMain {
                     break;
                 case 5:
                     System.out.println("How much do you want to withdraw? ");
-                    double withdrawAmt = input.nextDouble();
+                    int withdrawAmt = (int) input.nextDouble();
                     System.out.println("Enter password");
                     String password = input.next();
                     System.out.println("Enter account number");
-                    String accountNmb = input.next();
-                    bank.withdraw(withdrawAmt, password,accountNmb);
+                    String accountNumb = input.next();
+                    bank.withdraw(withdrawAmt, password,accountNumb);
                     break;
                 case 6:
                     System.out.println("Enter receiver account");

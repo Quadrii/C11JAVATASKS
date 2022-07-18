@@ -1,3 +1,5 @@
+package Chapter2and3.feeToMeter;
+
 import java.util.Scanner;
 
 public class ConvertFeetToMeter {
